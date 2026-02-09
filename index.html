@@ -1,0 +1,689 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2025-05-23T08:30:00.000-04:00");
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "It's LIVE";
+  }
+}, 1000);
+</script>
+
+
+<html>
+	<head>
+		<title>It’s the demos Workshop RSS 2026</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- table style-->
+		<style>
+			a{
+				color: white;
+			}
+			#schedule_tab {
+			  font-family: Arial, Helvetica, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+			}
+
+			#schedule_tab td, #schedule_tab th {
+			  border: 2px solid #ddd;
+			  padding: 14px;
+			  color: white;
+			}
+
+			#schedule_tab tr:nth-child(even){background-color: #9fabbd;}
+
+			#schedule_tab tr:hover {background-color: #a8b9d2;}
+
+			#schedule_tab th {
+			  padding-top: 12px;
+			  padding-bottom: 12px;
+			  text-align: left;
+			  background-color: #374e73;
+			  color: white;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<!--li><a href="#live">Live</a></li-->
+							<li><a href="#intro">Home</a></li>
+							<li><a href="#content">Content</a></li>
+							<li><a href="#award">Award</a></li>
+							<li><a href="#schedule">Schedule</a></li>
+							<li><a href="#papers">Call for Papers</a></li>
+							<li><a href="#talks">Invited speakers</a></li>
+							<li><a href="#org">Organizers</a></li>
+							<!--li><a href="#collab">Links</a></li-->
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Live -->
+					<!--section id="live" class="wrapper style3 fullscreen fade-up">
+						<div class="inner">
+							<h2>5th Workshop: Reflections on Representations and Manipulating Deformable Objects @ <a href="https://2025.ieee-icra.org/" target="_blank">ICRA2025 - IS LIVE</a> </h2>
+
+							
+<h3/>
+<h3> Slido event for interaction: #9268492 (<a href="https://tinyurl.com/rmdo-ws-25"> https://tinyurl.com/rmdo-ws-25</a>)  </h3>
+<h3>Meeting Room: 404 </h3>
+						</div>
+						
+					</section-->
+
+<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+
+							<!--h1 id="demo"></h1-->
+
+							<h1 id="RSS Workshop proposal Website"></h1>
+
+							<h2>It’s the demos, st***: A Deep Look at the Role of Demonstration Quality in Imitation-Based Robot Manipulation @ <a href="https://roboticsconference.org/" target="_blank">RSS 2026</a> </h2>
+
+							
+
+							<p>
+							Imitation-based robot manipulation has entered a phase where short to mid horizon tasks that can be unambiguously teleoperated have a high likelihood of success. Further Progress is increasingly driven by large-scale demonstration collection in real-world settings rather than purely algorithmic novelty. Modern pipelines, ranging from behavior cloning to diffusion- and transformer-based policies, often rely on thousands to millions of frames of demonstrations gathered via teleoperation from expert users. 
+							Within this regime, demonstration quality is a first-class variable: differences in operator skill and style (“robot wizards”), interface ergonomics, latency, action representations, and curation choices can decisively shape downstream policy performance, robustness, and generalization. Despite this, the community lacks a shared vocabulary, metrics, and engineering playbook for what “high-quality” demonstrations mean across tasks and embodiments, and how to reliably produce them at scale.
+							The workshop targets researchers and practitioners who build, use, or maintain demonstration datasets for manipulation learning. The intended audience includes: (i) method developers working on learning-from-demonstration for dexterous manipulation, mobile manipulation, and bimanual tasks; (ii) dataset builders and infrastructure engineers responsible for logging, synchronization, calibration, and labeling; and (iii) practitioners deploying imitation-based manipulation in industrial or field environments where reliability, repeatability are central. We expect strong relevance for groups collecting demonstrations “in the wild,” where demonstrations are produced by multiple operators with varying expertise, under time pressure, and with imperfect sensing, occlusions, or changing scene conditions.
+							Presenters and panelists will be drawn from multiple sub-communities that rarely meet in a single forum: robot manipulation learning (BC, diffusion/transformer policies, hybrid IL/RL), human-in-the-loop systems (teleoperation, XR interfaces, shared autonomy and interventions), dataset and benchmark design (metadata standards, evaluation protocols, reproducibility), and industry robotics (quality assurance, safety practices, scalable operations, and documentation). The workshop will explicitly connect “front-end” data collection decisions to “back-end” learning and evaluation outcomes, encouraging speakers to share concrete lessons from building and stress-testing real pipelines.
+							The workshop’s relevance and impact is to complement RSS main-track research by focusing on best practices and practical failure modes that are often omitted from papers but strongly determine success in practice. Key themes include: Best-practices for real world data collection, how to train operators; how to characterize and manage operator-to-operator variation; how to design collection protocols that reduce reliance on rare “wizard” skill; how to define and measure quality beyond task success (e.g., coverage, consistency, uncertainty, recoveries, and intent clarity); how to implement quality-aware filtering, weighting, and dataset documentation; and how to report dataset properties in ways that make results comparable across labs. The expected outcome is a community-curated set of actionable recommendations, protocols, checklists, as well as open problems. The final goal is to improve reproducibility, reduce wasted data collection, and accelerate reliable imitation-based manipulation progress in 2026 and beyond.
+
+
+</p>
+
+
+
+							
+
+
+
+
+						</div>
+					</section>
+
+
+
+
+					<!-- Method -->
+					<section id="content" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>Content</h2>
+							<h3>Topics</h3>
+
+							<p>
+								We will focus discussions around concrete, practice-driven questions that connect demonstration collection decisions to downstream imitation-learning performance:
+
+
+<ul>
+  <li>What is “demonstration quality” beyond task success?
+Which dimensions matter most in manipulation (e.g., coverage, consistency, smoothness, recoveries, intent clarity, viewpoint/occlusion)?</li>
+  <li> Operator variation and the “robot wizard” effect.
+How large is inter-operator variability in real datasets? What behaviors distinguish consistently high-performing operators? When do “wizard” demos help vs. hurt generalization?</li>
+  <li>Teleoperation/XR interface factors that change the data distribution.
+How do latency, control mappings, action space choices, assistive autonomy, camera viewpoints, haptics, and operator feedback cues affect demo quality and policy outcomes?</li>
+  <li>Quality control at scale.
+What lightweight checks are effective in large-scale pipelines (automatic heuristics, consistency checks, anomaly detection, review queues? What should be measured routinely?</li>
+  <li>Curation strategies: keep or discard, filter, weight? 
+When is it better to discard poor demos vs. keep them with weights? How do we avoid biasing the dataset by over-filtering? What metadata is essential?</li>
+  <li>Dataset documentation and reporting standards.
+What minimal metadata should accompany demonstrations to enable reproducibility?</li>
+  <li> Evaluation: linking demo properties to policy performance.
+Which benchmarks and protocols best reveal demo-quality effects? </li>
+  <li>From anecdotes to hypotheses (and experiments).
+What recurring practical observations can be turned into testable hypotheses?</li>
+
+
+							<p> </p>
+
+							<h3>Workshop format </h3>
+						<p>
+						The workshop will include:
+<ul><li>Invited talks by selected speakers, each consisting of about 25 minutes of presentation followed by 5 minutes for Q&A;<\li>
+<li>Accepted extended abstracts and Reflections (3 pages with unlimited references and appendix) presented in poster sessions and selected spotlight talks. In case of a hybrid or virtual workshop, we will ask for pre-recorded spotlight talks for a smoother execution in case of connection issues. However, for each selected contribution, at least one author will be required to be present during the workshop for a live Q&A session;  </li>
+<li>Structured small-group discussion to extract shared observations. We will run a 35-minute moderated breakout where participants are randomly assigned to mixed groups of 5–8 (balancing seniority, institutions, and backgrounds). Each group will use a short worksheet to: (i) list practical “rules of thumb” they believe, (ii) identify overlaps across members’ experiences, (iii) convert overlaps into candidate hypotheses (e.g., which interface factors correlate with higher-quality demos; which curation steps reduce failure), and (iv) propose minimal experiments or metrics to test them. Groups will report back key hypotheses to the room, and we will compile them into a shared post-workshop document.
+	</p>
+
+</div>
+					</section>
+<!-- Method -->
+					<section id="award" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Award</h2>
+
+							<p>
+								INCAR Robotics AB will sponsor an audience-voted award for the Most Useful Practical Information, intended to reward clarity, honesty about failure modes, and actionable guidance rather than polished results. The award consists of an Oculus Quest 3 + peripherals and a one-year license for the INCAR teleoperation/learning software stack (planned release 04/2026). Voting will be open to all attendees to amplify community preferences and encourage concise, transferable best practices.
+							</p>
+
+
+
+
+						</div>
+					</section>
+
+
+				<!-- Schedule -->
+					<section id="schedule" class="wrapper style1 spotlights">
+						<div class="inner">
+							<h2>Schedule  - avalible after acceptances </h2>
+							<hr style="width:80%;text-align:left;margin-left:5">
+							<div class="row">
+
+									<p></p>
+
+							</div>
+
+
+							<!--h3>Time Zone: GMT -04</h3>
+
+<table id="schedule_tab">
+
+  <tr>
+    <th>Time</th>
+    <th>Activity</th>
+  </tr>
+
+  <tr>
+    <td>08:30 - 08:45</td>
+    <td>Workshop opening <a href="https://youtu.be/MOVkY1sBPJg" target="_blank">[Video]</a> </td> 
+  </tr>
+
+  <tr>
+    <td>08:45 - 09:15</td>
+    <td><b>Jeannette Bohg</b> [In person] - Object-centric or not: How to represent Deformables for Manipulation? <a href="https://youtu.be/XfqvrAvv-BA" target="_blank">[Video]</a>  </td>
+  </tr>
+
+  <tr>
+    <td>09:15 - 10:00</td>
+    <td>
+      Spotlight Talks #1 
+      <ul>
+		<li>Mahdiar Edraki*; Silvia Buscaglione; Rakshith Lokesh; John Peter Whitney; Alireza Ramezani; Dagmar Sternad; <b>Human-Inspired Robot Whip Manipulation: Preparatory Actions Increase Range and Reduce Control Effort <a href="spotlight/01_01_05_Edraki_Human.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/e08K-8K7hFE" target="_blank">[Video]</a></b></li>
+<li>Wendi Chen*; Han Xue; Fangyuan Zhou; Yuan Fang; Cewu Lu; <b>DeformPAM: Data-Efficient Learning for Long-horizon Deformable Object Manipulation via Preference-based Action Alignment <a href="spotlight/01_02_10_Chen_DeformPAM.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/0zYwjLtcpQk" target="_blank">[Video]</a></b></li>
+<li>Haodi Hu*; Yue Wu; Tian Xie; Daniel Seita; Feifei Qian; <b>Granular loco-manipulation: Repositioning rocks through strategic sand avalanche <a href="spotlight/01_03_11_Hu_granular.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/KJk6iJ7duoE" target="_blank">[Video]</a></b></li>
+<li>Oriol Barbany*; Adrià Colomé; Carme Torras; <b>Beyond Static Perception: Integrating Temporal Context into VLMs for Cloth Folding <a href="spotlight/01_04_13_Barbany_beyond.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/5jef2jdInvU" target="_blank">[Video]</a></b></li>
+<li>Jay Kamat*; Júlia Borràs; Carme Torras; <b>A compact cloth state representation that enables generalization across different cloth shapes <a href="spotlight/01_05_14_Kamat_compact.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/sNZBkpTk85Y" target="_blank">[Video]</a></b></li>
+<li>Holly Dinkel*; Marcel Büsching; Alberta Longhini; Brian Coltin; Trey Smith; Danica Kragic; Mårten Björkman; Timothy Bretl; <b>DLO-Splatting: Tracking Deformable Linear Objects Using 3D Gaussian Splatting <a href="spotlight/01_06_15_Dinkel_DLO-Splatting.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/CG4WDWumGXA" target="_blank">[Video]</a></b></li>
+<li>Yuhong Deng*; David Hsu; <b> General-purpose Clothes Manipulation with Semantic Keypoints <a href="spotlight/01_07_17_Deng_general.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/oc_r4mdx_cc" target="_blank">[Video]</a></b></li>
+<li>Mahdi Bonyani*; Maryam Soleymani; Chao Wang; <b>Robust Shape-Free Manipulation through a Graph-Based Reinforcement Learning Approach for Deformable Objects <a href="spotlight/01_08_18_Bonyani_robust.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/hUULJDIh44Q" target="_blank">[Video]</a></b></li> 
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>10:00 - 11:00</td>
+    <td>Coffee Break + Poster Presentation</td>
+  </tr>
+
+  <tr>
+    <td>11:00 - 11:30</td>
+    <td><b>Yiannis Demiris</b> [Remote] - Manipulation of Deformable Objects in Assistive Tasks</td>
+  </tr>
+
+  <tr>
+    <td>11:30 - 12:00</td>    
+    <td><b>Shuran Song</b> [In person] - Five Lessons Learned on Deformable Object Manipulation <a href="https://youtu.be/mtu64Y-oJyE" target="_blank">[Video]</a> </td>
+  </tr>
+
+  <tr>
+    <td>12:00 - 12:30</td>    	
+    <td><b>Ken Goldberg</b> [In person] - AI + GOFE for Manipulating 1D, 2D, and 3D Deformable Objects <a href="https://youtu.be/bTebt0G0sKE" target="_blank">[Video]</a></td>
+  </tr>
+
+  <tr>
+    <td>12:30 - 13:30</td>
+    <td>Lunch Break</td>
+  </tr>
+
+  <tr>
+    <td>13:30 - 14:00</td>
+    <td><b>Zackory Erickson</b> [Remote] - Physical HRI with Deformable Manipulation <a href="https://youtu.be/yGVfZwTcX2Y" target="_blank">[Video]</a></td>
+  </tr>
+
+  <tr>
+    <td>14:00 - 14:30</td>
+    <td><b>Chuang Gan</b> [In person] - Genesis: A Generative and Universal Physics Engine for Robotics <a href="https://youtu.be/l_FB1ighsZ8" target="_blank">[Video]</a></td>
+  </tr>
+
+  <tr>
+    <td>14:30 - 15:15</td>
+    <td>
+      Spotlight Talks #2 
+      <ul>
+        <li>Hanxiao Jiang*; Hao-Yu Hsu; Kaifeng Zhang; Hsin-Ni Yu; Shenlong Wang; Yunzhu Li; <b>PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos <a href="spotlight/02_01_03_Jiang_PhysTwin.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/j5XLZepGMno" target="_blank">[Video]</a></b></li>
+<li>Kavish Kondap*; Osher Azulay; Jaimyn Drake; Shuangyu Xie; Hui Li; Sachin Chitta; Ken Goldberg; <b>Adaptive Cable Manipulation Around Constrained Fixtures with Bi-Manual Slack Control <a href="spotlight/02_02_04_Kondap_adaptive.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/MpmCXLxb_k4" target="_blank">[Video]</a></b></li>
+<li>Andreas Mueller*; <b>Analytic Continuum Forward Kinematics of Deformable Linear Objects under Static Conditions <a href="spotlight/02_03_07_Mueller_analytic.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/cw4dqlJoqLo" target="_blank">[Video]</a></b></li>
+<li>Nikhil Shinde*; Xiao Liang; Fei Liu; Yutong Zhang; Florian Richter; Sylvia Herbert; Michael Yip; <b>JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments <a href="spotlight/02_04_08_Shinde_JIGGLE.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/pLAgEewAUL0" target="_blank">[Video]</a></b></li>
+<li>Alessio Caporali*; Gianluca Palli;<b> Multi-View Model-Based Visual Tracking of Deformable Linear Objects  <a href="spotlight/02_05_09_Caporali_multi.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/DAoNi7xFxTk" target="_blank">[Video]</a></b></li>
+<li>Zhaole Sun*; <b>Dexterous Cable Manipulation: An Initial Exploration <a href="spotlight/02_06_12_Sun_dexterous.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/ASfQpc0gG6c" target="_blank">[Video]</a></b></li>
+<li>Nidhya Shivakumar*; Justin Yu; Veena Sumedh; Josh Zhang; Ethan Ransing; Osher Azulay; Ken Goldberg; <b>HANDLOOM 3.0: Interactive Bi-Directional Cable Tracing Amid Clutter <a href="spotlight/02_07_16_Shivakumar_HANDLOOM.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/GJJB4h1eWbU" target="_blank">[Video]</a></b></li>
+<li>Simeon Adebola*; Chung Min Kim; Justin Kerr; Shuangyu Xie; Prithvi Akella; Jose Luis Susa Rincon; Eugen Solowjow; Ken Goldberg; <b>A “Botany-Bot” for Digital Twin Monitoring of Occluded and Underleaf Plant Structures <a href="spotlight/02_08_19_Adebola_botany-bot.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/Lq9jlzFiHuQ" target="_blank">[Video]</a></b></li>
+ <li>Kaifeng Zhang*; Baoyu Li; Kris Hauser; Yunzhu Li; <b>Particle-Grid Neural Dynamics for Learning Deformable Object Models from Depth Images <a href="spotlight/02_09_20_Particle_Grid_Neural_Dynamics.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/mEvCpUoUvLY" target="_blank">[Video]</a></b></li>
+
+
+ </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>15:15 - 16:00</td>
+    <td>Coffee Break + Poster Presentation</td>
+  </tr>
+
+  <tr>
+    <td>16:00 - 16:30</td>
+    <td><b>Yunzhu Li</b> [In person] - Learning Structured World Models From and For Physical Interactions <a href="https://youtu.be/Mn4sc1hZCAk" target="_blank">[Video]</a> </td>
+    
+  </tr>
+
+  <tr>
+    <td>16:30 - 17:00</td>
+    <td><b>Panel Discussion</b> - Reflections & Future Directions in Deformable Object Manipulation <a href="https://youtu.be/llJyBamNLOs" target="_blank">[Video]</a></td>
+  </tr>
+
+  <tr>
+    <td>17:00 - 17:30</td>
+    <td>Best Abstract Award & Closing Remarks <a href="https://youtu.be/zCXARcmi7lQ" target="_blank">[Video]</a></td>
+  </tr>
+
+</table-->
+
+
+					
+
+</div>
+					</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<section id="papers" class="wrapper style4 fullscreen fade-up">
+    <div class="inner">
+        <h2>Call for Papers - Available after workshop acceptances.</h2>
+
+        <p> </p>
+
+        <!--p>We invite participants to submit extended abstracts of <b>3 pages</b>, with unlimited pages for references and appendices, in the <a href="https://journals.ieeeauthorcenter.ieee.org">IEEE conference style</a>. Submissions will be reviewed by experts in their respective fields. The accepted abstracts will be made available on the workshop website but will not appear in the official IEEE conference proceedings. Participants are encouraged to submit their recent work on the topics of interest mentioned above.</p>
+
+        <p>We will also accept “reflection” contributions from former participants who have attended at least one previous edition of the workshop. This unique submission track focuses on reflecting on prior work, allowing contributors to share how their research has evolved or incorporated new advances from other fields, as well as to propose future directions for the community. Page limit is also 3 pages.</p>
+
+        <p>Contributions are encouraged, but are not required, to be original. The review process will be single-blind, meaning the submitted paper does not need to be anonymized.</p>
+
+        <p>Accepted extended abstracts will be presented in poster sessions and selected spotlight talks. We will request pre-recorded spotlight talks to ensure a smoother execution of the workshop. However, for each selected contribution, at least one author will be required to be present during the workshop for a live Q&A session.</p>
+
+        <p>Abstracts can be submitted through Microsoft CMT: <a href="https://cmt3.research.microsoft.com/WDOICRA2025/" target="_blank">WDOICRA2025</a>.</p>
+
+        <p> </p>
+							<h3>IEEE RAS Computer & Robot Vision workshop award</h3>
+							<p>We are happy to announce the <b>WDO Best Abstract Award </b> sponsored by the <a href="https://www.ieee-ras.org/computer-robot-vision" target="_blank">IEEE RAS Technical Committee Computer & Robot Vision</a>.
+							The selected contribution will receive a <b> prize of worth 300$</b>.
+							Any extended abstract or reflection submitted to the workshop will be automatically considered for the award.</p>
+
+        <h3>Important Dates: (dd/mm/yyyy)</h3>
+        <ul>
+            <li>Submission Deadline: <s>31/03/2025</s>  <s>07/04/2025</s> <b>14/04/2025 (firm deadline)</b> (23:59 PST)</li>
+            <li>Notification Date:   <s>23/04/2025</s> <b>30/04/2025</b>  (23:59 PST)</li>
+            <li>Final Submission:  <s>30/04/2025</s> <b>07/05/2025</b> (23:59 PST)</li>
+            <li>Workshop Date: <b>23/05/2025</b></li>
+        </ul-->
+    </div>
+</section>
+
+
+
+				
+
+
+					<section id="talks" class="wrapper style2 spotlights">
+						<div class="inner">
+							<h2>Invited Speakers - Available after workshop acceptances </h2>
+
+							<!--div class="row">
+							  <div class="column">
+							    <img src="imgs/jeannette.png" alt="Jeannette Bohg" class="img-list">
+							  </div>
+							  <div class="column" >
+									<p></p>
+				    				<h3 class='name-list'><b>  Jeannette Bohg </b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									Assistant Professor
+									<br>
+									Stanford University, USA
+									<br>
+									<a href="https://web.stanford.edu/~bohg/" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Object-centric or not: How to represent Deformables for Manipulation?
+ <br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+							<b> Bio:</b> Jeannette Bohg is an Assistant Professor of Computer Science at Stanford University. She was a group leader at the Autonomous Motion Department (AMD) of the MPI for Intelligent Systems until September 2017. Before joining AMD in January 2012, Jeannette Bohg was a PhD student at the Division of Robotics, Perception and Learning (RPL) at KTH in Stockholm. In her thesis, she proposed novel methods towards multi-modal scene understanding for robotic grasping. She also studied at Chalmers in Gothenburg and at the Technical University in Dresden where she received her Master in Art and Technology and her Diploma in Computer Science, respectively. Her research focuses on perception and learning for autonomous robotic manipulation and grasping. She is specifically interested in developing methods that are goal-directed, real-time and multi-modal such that they can provide meaningful feedback for execution and learning. Jeannette Bohg has received several Early Career and Best Paper awards, most notably the 2019 IEEE Robotics and Automation Society Early Career Award and the 2020 Robotics: Science and Systems Early Career Award. <br>
+									</p>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/Yiannis.jpeg" alt="Yiannis Demiris" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>  Yiannis Demiris </b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									 Professor
+									<br>
+									Imperial College London, UK
+									<br>
+									<a href="https://profiles.imperial.ac.uk/y.demiris" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Manipulation of deformable objects in assistive tasks <br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+							<b> Bio:</b> Yiannis Demiris is a professor of human-centered robotics at Imperial College London, where he leads the Personal Robotics Laboratory, supported by a Royal Academy of Engineering Chair in Emerging Technologies. His research interests include human-centered multimodal perception, user modelling, and collaborative human-robot control, with a special emphasis on their application to assistive robotics. Prior to joining Imperial, he received his PhD in Intelligent Robotics and his BSc in Artificial Intelligence and Computer Science, both from the University of Edinburgh. <br>
+									</p>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/Zackory.jpg" alt="Zackory Erickson" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>  Zackory Erickson </b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									Assistant Professor
+									<br>
+									 Carnegie Mellon University (CMU), USA
+									<br>
+									<a href="https://zackory.com/" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Physical HRI with Deformable Manipulation <br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+							<b> Bio:</b> Zackory Erickson is an Assistant Professor in The Robotics Institute at Carnegie Mellon University, where he leads the Robotic Caregiving and Human Interaction (RCHI) Lab. His research focuses on developing new robot learning, mobile manipulation, and sensing methods for physical human-robot interaction and healthcare. Zackory’s work spans physical human-robot interaction, healthcare robotics, wearable health sensing, robot learning, physics simulation, multimodal perception, and mobile manipulation. Prior to joining CMU, Zackory received his PhD in Robotics from Georgia Tech with Prof. Charlie Kemp. He also received an M.S. in Computer Science from Georgia Tech and B.S. in Computer Science at the University of Wisconsin–La Crosse. He and his students have received Best Paper Award at HRI 2024, Best Student Paper Award at ICORR 2019, and a Best Paper in Service Robotics finalist at ICRA 2019. <br>
+									</p>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/Chuan.jpg" alt="Chuang Gan" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>  Chuang Gan</b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									Researcher at IBM, Assistant Professor at UMass Amherst
+									<br>
+									<a href="https://mitibmwatsonailab.mit.edu/people/chuang-gan/" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Genesis: A Generative and Universal Physics Engine for Robotics <br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+								
+							<b> Bio:</b> Chuang Gan is a Researcher at IBM and an Assistant Professor at UMass Amherst. Previously, Chuang Gan was a postdoctoral researcher at MIT, working with Professors Antonio Torralba, Daniela Rus, and Josh Tenenbaum. Before that, Chuang Gan completed a PhD with the highest honor at Tsinghua University under the supervision of Professor Andrew Chi-Chih Yao.
+
+							Chuang Gan's research lies at the intersection of computer vision, AI, cognitive science, and robotics. The overarching goal of this research is to develop human-like autonomous agents capable of sensing, reasoning, and acting in the physical world. Chuang Gan's work has been recognized with the Microsoft Fellowship and Baidu Fellowship and has received media coverage from CNN, BBC, The New York Times, WIRED, Forbes, and MIT Technology Review.		</p>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/Ken_Goldberg.jpg" alt="Ken Goldberg" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>  Ken Goldberg</b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									Professor, William S. Floyd Jr. Distinguished Chair in Engineering 
+									<br>
+									UC Berkeley, USA
+									<br>
+									<a href="http://goldberg.berkeley.edu" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> AI + GOFE for Manipulating 1D, 2D, and 3D Deformable Objects <br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+								
+							<b> Bio:</b> Ken Goldberg (IEEE Fellow, 2005) is President of the Robot Learning Foundation
+													and William S. Floyd Distinguished
+													Chair of Engineering at UC Berkeley and Chief Scientist of Ambi
+													Robotics and Jacobi Robotics. Ken leads research in robotics and
+													automation: grasping, manipulation, and learning for applications in
+													warehouses, industry, homes, agriculture, and robot-assisted surgery.
+													He is Professor of IEOR with appointments in EECS and Art Practice.
+													Ken is Chair of the Berkeley AI Research (BAIR) Steering Committee (60
+													faculty) and is co-founder and Editor-in-Chief emeritus of the IEEE
+													Transactions on Automation Science and Engineering (T-ASE). He has
+													published ten US patents and over 400 refereed papers. He has
+													presented over 600 invited lectures to academic and corporate
+													audiences. 	</p>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/yunzhu.jpg" alt="Yunzhu Li" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b>  Yunzhu Li</b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									 Assistant Professor
+									<br>
+									Columbia University, USA
+									<br>
+									<a href="https://yunzhuli.github.io/" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Learning Structured World Models From and For Physical Interactions<br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+							<b> Bio:</b> Yunzhu Li is an Assistant Professor of Computer Science at Columbia University. Before joining Columbia, he was an Assistant Professor at UIUC CS, spent time as a Postdoc at Stanford, and earned his PhD from MIT. Yunzhu’s work has been recognized with the Best Paper Award at ICRA, the Best Systems Paper Award, and as a Finalist for the Best Paper Award at CoRL. Yunzhu is also the recipient of the AAAI New Faculty Highlights, the Sony Faculty Innovation Award, the Adobe Research Fellowship, and was selected as the First Place Recipient of the Ernst A. Guillemin Master’s Thesis Award in AI and Decision Making at MIT. His research has been published in top journals and conferences, including Nature and Science, and has been featured by major media outlets. <br>
+									</p>
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+							<div class="row">
+							  <div class="column">
+							    <img src="imgs/shuran_song.jpg" alt="Shuran Song" class="img-list">
+							  </div>
+							  <div class="column">
+									<p></p>
+				    				<h3 class='name-list'><b> Shuran Song</b></h3>
+
+				    				<div class='info-list'>
+									<br>
+									Assistant Professor
+									<br>
+									Stanford University, USA
+									<br>
+									<a href="https://shurans.github.io/" target="_blank">Personal website</a>
+									<br>
+									</div>
+									<p class='talk-list'>
+									<b> Talk title:</b> Five Lessons Learned on Deformable Object Manipulation<br>
+								</p>							
+
+							  </div>
+							</div>
+							<p>
+							<b> Bio:</b> Shuran Song is an Assistant Professor of Electrical Engineering at Stanford University. Before joining Stanford, she was faculty at Columbia University. Shuran received her Ph.D. in Computer Science at Princeton University, BEng. at HKUST. Her research interests lie at the intersection of computer vision and robotics. Song’s research has been recognized through several awards, including the Best Paper Awards at RSS’22 and T-RO’20, Best System Paper Awards at CoRL’21, RSS’19, and finalists at RSS, ICRA, CVPR, and IROS. She is also a recipient of the NSF Career Award, Sloan Foundation fellowship as well as research awards from Microsoft, Toyota Research, Google, Amazon, and JP Morgan. <br>
+									</p-->
+
+					
+
+							<hr style="width:80%;text-align:left;margin-left:5">
+
+
+
+
+					</section>
+
+					<!-- org -->
+					<section id="org" class="wrapper style3 spotlights">
+						<div class="inner">
+							<h2>Organizers - Available after workshop acceptances. </h2>
+							<!--ul>
+							  <li>Alberta Longhini, KTH Royal Institute of Technology, Sweden</li>
+							  <li>Michael C. Welle, KTH Royal Institute of Technology, Sweden</li>
+							  <li>Martina Lippi, Roma Tre University, Italy</li>
+  							  <li>Lawrence Yunliang Chen, University of California, Berkeley, USA</li>
+							  <li>Daniel Seita, University of Southern California, USA</li>
+							  <li>Júlia Borràs Sol, Institut de Robòtica i Informàtica Industrial (CSIC-UPC), Spain</li>
+							  <li>Danica Kragic, KTH Royal Institute of Technology, Sweden</li>
+							  <li>David Held, Carnegie Mellon University, USA</li>
+							</ul-->
+					</section>
+
+					<!-- collaberations -->
+					<!--section id="collab" class="wrapper style4 fade-up">
+						<div class="inner">
+							<h2>Links</h2>
+							<ul>
+							<li>
+							  <b>Conference website:</b> Link to the conference website <a href="https://www.ieee-icra.org/">https://www.ieee-icra.org/</a>
+							</li>
+							</ul>
+						</div>
+					</section-->
+
+
+
+
+					<!-- contact -->
+					<section id="contact" class="wrapper style1 spotlights">
+						<div class="inner">
+							<h2>Contact</h2>
+							 <p> If you have any questions please contact Michael Welle at the email: <b>MichaelDOTWelleATincar-roboticsDOTse </b>  </p>
+
+							 <h2> Acknowledgment </h2> 
+							 <p> The <a href="https://cmt3.research.microsoft.com/Conference/Recent" target="_blank">Microsoft CMT service </a> was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support. </p>
+						</div>
+					</section>
+
+
+
+
+			</div>
+
+		<!-- Footer -->
+		<!-- TBD -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
