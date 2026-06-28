@@ -4,37 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2025-05-23T08:30:00.000-04:00");
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "It's LIVE";
-  }
-}, 1000);
-</script>
-
-
 <html>
 	<head>
 		<title>It’s the demos Workshop RSS 2026</title>
@@ -42,7 +11,6 @@ var x = setInterval(function() {
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<!-- table style-->
 		<style>
 			a{
 				color: white;
@@ -74,17 +42,14 @@ var x = setInterval(function() {
 	</head>
 	<body class="is-preload">
 
-		<!-- Date Banner -->
 		<div style="background-color:#374e73; color:white; text-align:center; padding:12px; font-size:1.1em; font-family:Arial,Helvetica,sans-serif; position:sticky; top:0; z-index:9999;">
-			<b>Workshop accepted!</b> &mdash; Monday, 13 July 2026 &bull; Morning Session &bull; <a href="https://roboticsconference.org/" target="_blank" style="color:#adc8f0;">RSS 2026</a>
+			<b>Monday, 13 July 2026</b> &bull; Morning Session &bull; Sydney, Australia &bull; <a href="https://roboticsconference.org/" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">RSS 2026</a>
 		</div>
 
-		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
 					<nav>
 						<ul>
-							<!--li><a href="#live">Live</a></li-->
 							<li><a href="#intro">Home</a></li>
 							<li><a href="#content">Content</a></li>
 							<li><a href="#award">Award</a></li>
@@ -92,36 +57,16 @@ var x = setInterval(function() {
 							<li><a href="#papers">Call for Papers</a></li>
 							<li><a href="#talks">Invited speakers</a></li>
 							<li><a href="#org">Organizers</a></li>
-							<!--li><a href="#collab">Links</a></li-->
 							<li><a href="#contact">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
 			</section>
 
-		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Live -->
-					<!--section id="live" class="wrapper style3 fullscreen fade-up">
-						<div class="inner">
-							<h2>5th Workshop: Reflections on Representations and Manipulating Deformable Objects @ <a href="https://2025.ieee-icra.org/" target="_blank">ICRA2025 - IS LIVE</a> </h2>
-
-							
-<h3/>
-<h3> Slido event for interaction: #9268492 (<a href="https://tinyurl.com/rmdo-ws-25"> https://tinyurl.com/rmdo-ws-25</a>)  </h3>
-<h3>Meeting Room: 404 </h3>
-						</div>
-						
-					</section-->
-
-<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-
-							<!--h1 id="demo"></h1-->
-
-							<h1 id="RSS Workshop proposal Website"></h1>
+							<h1 id="demo" aria-live="polite">Counting down to RSS 2026…</h1>
 
 							<h2>It’s the demos: A Deep Look at the Role of Demonstration Quality in Imitation-Based Robot Manipulation @ <a href="https://roboticsconference.org/" target="_blank">RSS 2026</a> </h2>
 
@@ -152,14 +97,12 @@ var x = setInterval(function() {
 
 
 
-					<!-- Method -->
 					<section id="content" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h2>Content</h2>
 							<h3>Topics</h3>
 
-							<p>
-								We will focus discussions around concrete, practice-driven questions that connect demonstration collection decisions to downstream imitation-learning performance:
+							<p>We will focus discussions around concrete, practice-driven questions that connect demonstration collection decisions to downstream imitation-learning performance:</p>
 
 
 <ul>
@@ -179,21 +122,18 @@ What minimal metadata should accompany demonstrations to enable reproducibility?
 Which benchmarks and protocols best reveal demo-quality effects? </li>
   <li>From anecdotes to hypotheses (and experiments).
 What recurring practical observations can be turned into testable hypotheses?</li>
-
-
-							<p> </p>
+							</ul>
 
 							<h3>Workshop format </h3>
-						<p>
-						The workshop will include:
+						<p>The workshop will include:</p>
 <ul><li>Invited talks: 25 min presentation + 5 min Q&amp;A.</li>
-<li>Accepted extended abstracts and Reflections (3 pages with unlimited references and appendix) presented in poster sessions and selected spotlight talks. In case of a hybrid or virtual workshop, we will ask for pre-recorded spotlight talks for a smoother execution in case of connection issues. However, for each selected contribution, at least one author will be required to be present during the workshop for a live Q&A session;  </li>
-<li>Structured small-group discussion to extract shared observations. We will run a 35-minute moderated breakout where participants are randomly assigned to mixed groups of 5–8 (balancing seniority, institutions, and backgrounds). Each group will use a short worksheet to: (i) list practical “rules of thumb” they believe, (ii) identify overlaps across members’ experiences, (iii) convert overlaps into candidate hypotheses (e.g., which interface factors correlate with higher-quality demos; which curation steps reduce failure), and (iv) propose minimal experiments or metrics to test them. Groups will report back key hypotheses to the room, and we will compile them into a shared post-workshop document.
-	</p>
+<li>Accepted extended abstracts and Reflections (3 pages with unlimited references and appendix) presented in poster sessions and selected spotlight talks. In case of a hybrid or virtual workshop, we will ask for pre-recorded spotlight talks for a smoother execution in case of connection issues. However, for each selected contribution, at least one author will be required to be present during the workshop for a live Q&amp;A session;  </li>
+<li>Structured group discussion to extract shared observations. We will run a 10-minute moderated discussion focused on practical “rules of thumb,” candidate hypotheses, and minimal experiments or metrics that could test them. We will compile the key hypotheses into a shared post-workshop document.
+							</li>
+						</ul>
 
 </div>
 					</section>
-<!-- Method -->
 					<section id="award" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Award</h2>
@@ -246,7 +186,6 @@ What recurring practical observations can be turned into testable hypotheses?</l
 					</section>
 
 
-				<!-- Schedule -->
 					<section id="schedule" class="wrapper style1 spotlights">
 						<div class="inner">
 							<h2>Schedule (Tentative)</h2>
@@ -265,7 +204,7 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </tr>
   <tr>
     <td>08:10 – 08:40</td>
-    <td>Invited Talk #1 (25 min talk + 5 min Q&amp;A)</td>
+    <td><strong>Nadia Figueroa</strong> — TBA (25 min talk + 5 min Q&amp;A, remote)</td>
   </tr>
   <tr>
     <td>08:40 – 09:10</td>
@@ -273,7 +212,7 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </tr>
   <tr>
     <td>09:10 – 09:40</td>
-    <td>Invited Talk #2 (25 min talk + 5 min Q&amp;A)</td>
+    <td><strong>Dongheui Lee</strong> — TBA (25 min talk + 5 min Q&amp;A, in person)</td>
   </tr>
   <tr>
     <td>09:40 – 10:30</td>
@@ -281,14 +220,18 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </tr>
   <tr>
     <td>10:30 – 11:00</td>
-    <td>Invited Talk #3 (25 min talk + 5 min Q&amp;A)</td>
+    <td><strong>Dana Kulić</strong> — Assessing and improving demonstrations and demonstrators for LfD (25 min talk + 5 min Q&amp;A, in person)</td>
   </tr>
   <tr>
     <td>11:00 – 11:20</td>
     <td>Lightning Talks #2 (2 × (7 min talk + 3 min Q&amp;A))</td>
   </tr>
   <tr>
-    <td>11:20 – 11:55</td>
+    <td>11:20 – 11:45</td>
+    <td><strong>David Watkins</strong> — What Data Robots Need: From Co-Designed Handheld Capture to Fleet-Scale Flywheels (20 min talk + 5 min Q&amp;A)</td>
+  </tr>
+  <tr>
+    <td>11:45 – 11:55</td>
     <td>Structured Group Discussion and Presentation</td>
   </tr>
   <tr>
@@ -300,124 +243,7 @@ What recurring practical observations can be turned into testable hypotheses?</l
 							</div>
 
 
-							<!--h3>Time Zone: GMT -04</h3>
-
-<table id="schedule_tab">
-
-  <tr>
-    <th>Time</th>
-    <th>Activity</th>
-  </tr>
-
-  <tr>
-    <td>08:30 - 08:45</td>
-    <td>Workshop opening <a href="https://youtu.be/MOVkY1sBPJg" target="_blank">[Video]</a> </td> 
-  </tr>
-
-  <tr>
-    <td>08:45 - 09:15</td>
-    <td><b>Jeannette Bohg</b> [In person] - Object-centric or not: How to represent Deformables for Manipulation? <a href="https://youtu.be/XfqvrAvv-BA" target="_blank">[Video]</a>  </td>
-  </tr>
-
-  <tr>
-    <td>09:15 - 10:00</td>
-    <td>
-      Spotlight Talks #1 
-      <ul>
-		<li>Mahdiar Edraki*; Silvia Buscaglione; Rakshith Lokesh; John Peter Whitney; Alireza Ramezani; Dagmar Sternad; <b>Human-Inspired Robot Whip Manipulation: Preparatory Actions Increase Range and Reduce Control Effort <a href="spotlight/01_01_05_Edraki_Human.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/e08K-8K7hFE" target="_blank">[Video]</a></b></li>
-<li>Wendi Chen*; Han Xue; Fangyuan Zhou; Yuan Fang; Cewu Lu; <b>DeformPAM: Data-Efficient Learning for Long-horizon Deformable Object Manipulation via Preference-based Action Alignment <a href="spotlight/01_02_10_Chen_DeformPAM.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/0zYwjLtcpQk" target="_blank">[Video]</a></b></li>
-<li>Haodi Hu*; Yue Wu; Tian Xie; Daniel Seita; Feifei Qian; <b>Granular loco-manipulation: Repositioning rocks through strategic sand avalanche <a href="spotlight/01_03_11_Hu_granular.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/KJk6iJ7duoE" target="_blank">[Video]</a></b></li>
-<li>Oriol Barbany*; Adrià Colomé; Carme Torras; <b>Beyond Static Perception: Integrating Temporal Context into VLMs for Cloth Folding <a href="spotlight/01_04_13_Barbany_beyond.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/5jef2jdInvU" target="_blank">[Video]</a></b></li>
-<li>Jay Kamat*; Júlia Borràs; Carme Torras; <b>A compact cloth state representation that enables generalization across different cloth shapes <a href="spotlight/01_05_14_Kamat_compact.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/sNZBkpTk85Y" target="_blank">[Video]</a></b></li>
-<li>Holly Dinkel*; Marcel Büsching; Alberta Longhini; Brian Coltin; Trey Smith; Danica Kragic; Mårten Björkman; Timothy Bretl; <b>DLO-Splatting: Tracking Deformable Linear Objects Using 3D Gaussian Splatting <a href="spotlight/01_06_15_Dinkel_DLO-Splatting.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/CG4WDWumGXA" target="_blank">[Video]</a></b></li>
-<li>Yuhong Deng*; David Hsu; <b> General-purpose Clothes Manipulation with Semantic Keypoints <a href="spotlight/01_07_17_Deng_general.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/oc_r4mdx_cc" target="_blank">[Video]</a></b></li>
-<li>Mahdi Bonyani*; Maryam Soleymani; Chao Wang; <b>Robust Shape-Free Manipulation through a Graph-Based Reinforcement Learning Approach for Deformable Objects <a href="spotlight/01_08_18_Bonyani_robust.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/hUULJDIh44Q" target="_blank">[Video]</a></b></li> 
-      </ul>
-    </td>
-  </tr>
-
-  <tr>
-    <td>10:00 - 11:00</td>
-    <td>Coffee Break + Poster Presentation</td>
-  </tr>
-
-  <tr>
-    <td>11:00 - 11:30</td>
-    <td><b>Yiannis Demiris</b> [Remote] - Manipulation of Deformable Objects in Assistive Tasks</td>
-  </tr>
-
-  <tr>
-    <td>11:30 - 12:00</td>    
-    <td><b>Shuran Song</b> [In person] - Five Lessons Learned on Deformable Object Manipulation <a href="https://youtu.be/mtu64Y-oJyE" target="_blank">[Video]</a> </td>
-  </tr>
-
-  <tr>
-    <td>12:00 - 12:30</td>    	
-    <td><b>Ken Goldberg</b> [In person] - AI + GOFE for Manipulating 1D, 2D, and 3D Deformable Objects <a href="https://youtu.be/bTebt0G0sKE" target="_blank">[Video]</a></td>
-  </tr>
-
-  <tr>
-    <td>12:30 - 13:30</td>
-    <td>Lunch Break</td>
-  </tr>
-
-  <tr>
-    <td>13:30 - 14:00</td>
-    <td><b>Zackory Erickson</b> [Remote] - Physical HRI with Deformable Manipulation <a href="https://youtu.be/yGVfZwTcX2Y" target="_blank">[Video]</a></td>
-  </tr>
-
-  <tr>
-    <td>14:00 - 14:30</td>
-    <td><b>Chuang Gan</b> [In person] - Genesis: A Generative and Universal Physics Engine for Robotics <a href="https://youtu.be/l_FB1ighsZ8" target="_blank">[Video]</a></td>
-  </tr>
-
-  <tr>
-    <td>14:30 - 15:15</td>
-    <td>
-      Spotlight Talks #2 
-      <ul>
-        <li>Hanxiao Jiang*; Hao-Yu Hsu; Kaifeng Zhang; Hsin-Ni Yu; Shenlong Wang; Yunzhu Li; <b>PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos <a href="spotlight/02_01_03_Jiang_PhysTwin.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/j5XLZepGMno" target="_blank">[Video]</a></b></li>
-<li>Kavish Kondap*; Osher Azulay; Jaimyn Drake; Shuangyu Xie; Hui Li; Sachin Chitta; Ken Goldberg; <b>Adaptive Cable Manipulation Around Constrained Fixtures with Bi-Manual Slack Control <a href="spotlight/02_02_04_Kondap_adaptive.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/MpmCXLxb_k4" target="_blank">[Video]</a></b></li>
-<li>Andreas Mueller*; <b>Analytic Continuum Forward Kinematics of Deformable Linear Objects under Static Conditions <a href="spotlight/02_03_07_Mueller_analytic.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/cw4dqlJoqLo" target="_blank">[Video]</a></b></li>
-<li>Nikhil Shinde*; Xiao Liang; Fei Liu; Yutong Zhang; Florian Richter; Sylvia Herbert; Michael Yip; <b>JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments <a href="spotlight/02_04_08_Shinde_JIGGLE.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/pLAgEewAUL0" target="_blank">[Video]</a></b></li>
-<li>Alessio Caporali*; Gianluca Palli;<b> Multi-View Model-Based Visual Tracking of Deformable Linear Objects  <a href="spotlight/02_05_09_Caporali_multi.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/DAoNi7xFxTk" target="_blank">[Video]</a></b></li>
-<li>Zhaole Sun*; <b>Dexterous Cable Manipulation: An Initial Exploration <a href="spotlight/02_06_12_Sun_dexterous.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/ASfQpc0gG6c" target="_blank">[Video]</a></b></li>
-<li>Nidhya Shivakumar*; Justin Yu; Veena Sumedh; Josh Zhang; Ethan Ransing; Osher Azulay; Ken Goldberg; <b>HANDLOOM 3.0: Interactive Bi-Directional Cable Tracing Amid Clutter <a href="spotlight/02_07_16_Shivakumar_HANDLOOM.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/GJJB4h1eWbU" target="_blank">[Video]</a></b></li>
-<li>Simeon Adebola*; Chung Min Kim; Justin Kerr; Shuangyu Xie; Prithvi Akella; Jose Luis Susa Rincon; Eugen Solowjow; Ken Goldberg; <b>A “Botany-Bot” for Digital Twin Monitoring of Occluded and Underleaf Plant Structures <a href="spotlight/02_08_19_Adebola_botany-bot.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/Lq9jlzFiHuQ" target="_blank">[Video]</a></b></li>
- <li>Kaifeng Zhang*; Baoyu Li; Kris Hauser; Yunzhu Li; <b>Particle-Grid Neural Dynamics for Learning Deformable Object Models from Depth Images <a href="spotlight/02_09_20_Particle_Grid_Neural_Dynamics.pdf" target="_blank">[PDF]</a>  <a href="https://youtu.be/mEvCpUoUvLY" target="_blank">[Video]</a></b></li>
-
-
- </ul>
-    </td>
-  </tr>
-
-  <tr>
-    <td>15:15 - 16:00</td>
-    <td>Coffee Break + Poster Presentation</td>
-  </tr>
-
-  <tr>
-    <td>16:00 - 16:30</td>
-    <td><b>Yunzhu Li</b> [In person] - Learning Structured World Models From and For Physical Interactions <a href="https://youtu.be/Mn4sc1hZCAk" target="_blank">[Video]</a> </td>
-    
-  </tr>
-
-  <tr>
-    <td>16:30 - 17:00</td>
-    <td><b>Panel Discussion</b> - Reflections & Future Directions in Deformable Object Manipulation <a href="https://youtu.be/llJyBamNLOs" target="_blank">[Video]</a></td>
-  </tr>
-
-  <tr>
-    <td>17:00 - 17:30</td>
-    <td>Best Abstract Award & Closing Remarks <a href="https://youtu.be/zCXARcmi7lQ" target="_blank">[Video]</a></td>
-  </tr>
-
-</table-->
-
-
-					
-
-</div>
+							</div>
 					</section>
 
 
@@ -454,8 +280,8 @@ What recurring practical observations can be turned into testable hypotheses?</l
          <h3>Important Dates</h3>
 					  <ul>
 					    <li><strong>Submission deadline:</strong> Friday, 19 June 2026, 23:59 AoE</li>
-					    <li><strong>Author notification:</strong> Friday, 26 June 2026, 23:59 AoE</li>
-					    <li><strong>Final submission deadline:</strong> Friday, 3 July 2026, 23:59 AoE</li>
+						    <li><strong>Author notification:</strong> <s>Friday, 26 June 2026, 23:59 AoE</s> Tuesday, 30 June 2026, 23:59 AoE</li>
+						    <li><strong>Final submission deadline:</strong> <s>Friday, 3 July 2026, 23:59 AoE</s> Monday, 6 July 2026, 23:59 AoE</li>
 					  </ul>
         <p>
 		  The submission portal is now live:
@@ -490,8 +316,10 @@ What recurring practical observations can be turned into testable hypotheses?</l
 									<a href="https://nbfigueroa.github.io/" target="_blank">Personal website</a>
 									<br>
 									</div>
+									<p class="talk-list"><strong>Talk title:</strong> TBA</p>
 							  </div>
 							</div>
+							<p><strong>Bio:</strong> TBA</p>
 
 							<hr style="width:80%;text-align:left;margin-left:5">
 
@@ -510,8 +338,10 @@ What recurring practical observations can be turned into testable hypotheses?</l
 									<a href="https://www.tuwien.at/en/etit/ict/asl/team/dongheui-lee" target="_blank">Personal website</a>
 									<br>
 									</div>
+									<p class="talk-list"><strong>Talk title:</strong> TBA</p>
 							  </div>
 							</div>
+							<p><strong>Bio:</strong> TBA</p>
 
 							<hr style="width:80%;text-align:left;margin-left:5">
 
@@ -520,252 +350,48 @@ What recurring practical observations can be turned into testable hypotheses?</l
 							  </div>
 							  <div class="column">
 									<p></p>
-				    				<h3 class='name-list'><b>Dana Kulic</b></h3>
+									<h3 class='name-list'><b>Dana Kulić</b></h3>
 				    				<div class='info-list'>
 									<br>
 									Professor
 									<br>
 									Monash University, Australia
 									<br>
-									<a href="https://research.monash.edu/en/persons/dana-kulic" target="_blank">Personal website</a>
+									<a href="https://www.monash.edu/engineering/danakulic" target="_blank" rel="noopener noreferrer">Personal website</a>
 									<br>
 									</div>
+									<p class="talk-list"><strong>Talk title:</strong> Assessing and improving demonstrations and demonstrators for LfD</p>
 							  </div>
 							</div>
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-							<!--div class="row">
-							  <div class="column">
-							    <img src="imgs/jeannette.png" alt="Jeannette Bohg" class="img-list">
-							  </div>
-							  <div class="column" >
-									<p></p>
-				    				<h3 class='name-list'><b>  Jeannette Bohg </b></h3>
-
-				    				<div class='info-list'>
-									<br>
-									Assistant Professor
-									<br>
-									Stanford University, USA
-									<br>
-									<a href="https://web.stanford.edu/~bohg/" target="_blank">Personal website</a>
-									<br>
-									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> Object-centric or not: How to represent Deformables for Manipulation?
- <br>
-								</p>							
-
-							  </div>
-							</div>
-							<p>
-							<b> Bio:</b> Jeannette Bohg is an Assistant Professor of Computer Science at Stanford University. She was a group leader at the Autonomous Motion Department (AMD) of the MPI for Intelligent Systems until September 2017. Before joining AMD in January 2012, Jeannette Bohg was a PhD student at the Division of Robotics, Perception and Learning (RPL) at KTH in Stockholm. In her thesis, she proposed novel methods towards multi-modal scene understanding for robotic grasping. She also studied at Chalmers in Gothenburg and at the Technical University in Dresden where she received her Master in Art and Technology and her Diploma in Computer Science, respectively. Her research focuses on perception and learning for autonomous robotic manipulation and grasping. She is specifically interested in developing methods that are goal-directed, real-time and multi-modal such that they can provide meaningful feedback for execution and learning. Jeannette Bohg has received several Early Career and Best Paper awards, most notably the 2019 IEEE Robotics and Automation Society Early Career Award and the 2020 Robotics: Science and Systems Early Career Award. <br>
-									</p>
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-
-							<div class="row">
-							  <div class="column">
-							    <img src="imgs/Yiannis.jpeg" alt="Yiannis Demiris" class="img-list">
-							  </div>
-							  <div class="column">
-									<p></p>
-				    				<h3 class='name-list'><b>  Yiannis Demiris </b></h3>
-
-				    				<div class='info-list'>
-									<br>
-									 Professor
-									<br>
-									Imperial College London, UK
-									<br>
-									<a href="https://profiles.imperial.ac.uk/y.demiris" target="_blank">Personal website</a>
-									<br>
-									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> Manipulation of deformable objects in assistive tasks <br>
-								</p>							
-
-							  </div>
-							</div>
-							<p>
-							<b> Bio:</b> Yiannis Demiris is a professor of human-centered robotics at Imperial College London, where he leads the Personal Robotics Laboratory, supported by a Royal Academy of Engineering Chair in Emerging Technologies. His research interests include human-centered multimodal perception, user modelling, and collaborative human-robot control, with a special emphasis on their application to assistive robotics. Prior to joining Imperial, he received his PhD in Intelligent Robotics and his BSc in Artificial Intelligence and Computer Science, both from the University of Edinburgh. <br>
-									</p>
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-
-							<div class="row">
-							  <div class="column">
-							    <img src="imgs/Zackory.jpg" alt="Zackory Erickson" class="img-list">
-							  </div>
-							  <div class="column">
-									<p></p>
-				    				<h3 class='name-list'><b>  Zackory Erickson </b></h3>
-
-				    				<div class='info-list'>
-									<br>
-									Assistant Professor
-									<br>
-									 Carnegie Mellon University (CMU), USA
-									<br>
-									<a href="https://zackory.com/" target="_blank">Personal website</a>
-									<br>
-									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> Physical HRI with Deformable Manipulation <br>
-								</p>							
-
-							  </div>
-							</div>
-							<p>
-							<b> Bio:</b> Zackory Erickson is an Assistant Professor in The Robotics Institute at Carnegie Mellon University, where he leads the Robotic Caregiving and Human Interaction (RCHI) Lab. His research focuses on developing new robot learning, mobile manipulation, and sensing methods for physical human-robot interaction and healthcare. Zackory’s work spans physical human-robot interaction, healthcare robotics, wearable health sensing, robot learning, physics simulation, multimodal perception, and mobile manipulation. Prior to joining CMU, Zackory received his PhD in Robotics from Georgia Tech with Prof. Charlie Kemp. He also received an M.S. in Computer Science from Georgia Tech and B.S. in Computer Science at the University of Wisconsin–La Crosse. He and his students have received Best Paper Award at HRI 2024, Best Student Paper Award at ICORR 2019, and a Best Paper in Service Robotics finalist at ICRA 2019. <br>
-									</p>
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-
-							<div class="row">
-							  <div class="column">
-							    <img src="imgs/Chuan.jpg" alt="Chuang Gan" class="img-list">
-							  </div>
-							  <div class="column">
-									<p></p>
-				    				<h3 class='name-list'><b>  Chuang Gan</b></h3>
-
-				    				<div class='info-list'>
-									<br>
-									Researcher at IBM, Assistant Professor at UMass Amherst
-									<br>
-									<a href="https://mitibmwatsonailab.mit.edu/people/chuang-gan/" target="_blank">Personal website</a>
-									<br>
-									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> Genesis: A Generative and Universal Physics Engine for Robotics <br>
-								</p>							
-
-							  </div>
-							</div>
-							<p>
-								
-							<b> Bio:</b> Chuang Gan is a Researcher at IBM and an Assistant Professor at UMass Amherst. Previously, Chuang Gan was a postdoctoral researcher at MIT, working with Professors Antonio Torralba, Daniela Rus, and Josh Tenenbaum. Before that, Chuang Gan completed a PhD with the highest honor at Tsinghua University under the supervision of Professor Andrew Chi-Chih Yao.
-
-							Chuang Gan's research lies at the intersection of computer vision, AI, cognitive science, and robotics. The overarching goal of this research is to develop human-like autonomous agents capable of sensing, reasoning, and acting in the physical world. Chuang Gan's work has been recognized with the Microsoft Fellowship and Baidu Fellowship and has received media coverage from CNN, BBC, The New York Times, WIRED, Forbes, and MIT Technology Review.		</p>
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-
-							<div class="row">
-							  <div class="column">
-							    <img src="imgs/Ken_Goldberg.jpg" alt="Ken Goldberg" class="img-list">
-							  </div>
-							  <div class="column">
-									<p></p>
-				    				<h3 class='name-list'><b>  Ken Goldberg</b></h3>
-
-				    				<div class='info-list'>
-									<br>
-									Professor, William S. Floyd Jr. Distinguished Chair in Engineering 
-									<br>
-									UC Berkeley, USA
-									<br>
-									<a href="http://goldberg.berkeley.edu" target="_blank">Personal website</a>
-									<br>
-									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> AI + GOFE for Manipulating 1D, 2D, and 3D Deformable Objects <br>
-								</p>							
-
-							  </div>
-							</div>
-							<p>
-								
-							<b> Bio:</b> Ken Goldberg (IEEE Fellow, 2005) is President of the Robot Learning Foundation
-													and William S. Floyd Distinguished
-													Chair of Engineering at UC Berkeley and Chief Scientist of Ambi
-													Robotics and Jacobi Robotics. Ken leads research in robotics and
-													automation: grasping, manipulation, and learning for applications in
-													warehouses, industry, homes, agriculture, and robot-assisted surgery.
-													He is Professor of IEOR with appointments in EECS and Art Practice.
-													Ken is Chair of the Berkeley AI Research (BAIR) Steering Committee (60
-													faculty) and is co-founder and Editor-in-Chief emeritus of the IEEE
-													Transactions on Automation Science and Engineering (T-ASE). He has
-													published ten US patents and over 400 refereed papers. He has
-													presented over 600 invited lectures to academic and corporate
-													audiences. 	</p>
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-
-
-
-							<div class="row">
-							  <div class="column">
-							    <img src="imgs/yunzhu.jpg" alt="Yunzhu Li" class="img-list">
-							  </div>
-							  <div class="column">
-									<p></p>
-				    				<h3 class='name-list'><b>  Yunzhu Li</b></h3>
-
-				    				<div class='info-list'>
-									<br>
-									 Assistant Professor
-									<br>
-									Columbia University, USA
-									<br>
-									<a href="https://yunzhuli.github.io/" target="_blank">Personal website</a>
-									<br>
-									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> Learning Structured World Models From and For Physical Interactions<br>
-								</p>							
-
-							  </div>
-							</div>
-							<p>
-							<b> Bio:</b> Yunzhu Li is an Assistant Professor of Computer Science at Columbia University. Before joining Columbia, he was an Assistant Professor at UIUC CS, spent time as a Postdoc at Stanford, and earned his PhD from MIT. Yunzhu’s work has been recognized with the Best Paper Award at ICRA, the Best Systems Paper Award, and as a Finalist for the Best Paper Award at CoRL. Yunzhu is also the recipient of the AAAI New Faculty Highlights, the Sony Faculty Innovation Award, the Adobe Research Fellowship, and was selected as the First Place Recipient of the Ernst A. Guillemin Master’s Thesis Award in AI and Decision Making at MIT. His research has been published in top journals and conferences, including Nature and Science, and has been featured by major media outlets. <br>
-									</p>
+							<p><strong>Bio:</strong> Prof. Dana Kulić conducts research in human-centred robotics, focusing on human-robot interaction, interactive robot learning and human motion analysis. Her career includes research at the University of Tokyo on robot learning from demonstration, and a decade at the University of Waterloo, where she built a leading group in human-robot interaction and assistive systems. Since 2019, she is the Director of Monash Robotics and a Professor in the Faculty of Engineering at Monash University. She is an ARC Future Fellow, a CSIRO Adjunct Fellow and the Deputy Director of the ARC Centre for Optimised Ageing. She studies how robots can learn from and respond to human behaviour to collaborate safely and effectively in real-world settings, from healthcare and rehabilitation to industrial and everyday environments.</p>
 
 							<hr style="width:80%;text-align:left;margin-left:5">
 
 							<div class="row">
 							  <div class="column">
-							    <img src="imgs/shuran_song.jpg" alt="Shuran Song" class="img-list">
 							  </div>
 							  <div class="column">
 									<p></p>
-				    				<h3 class='name-list'><b> Shuran Song</b></h3>
-
-				    				<div class='info-list'>
+									<h3 class="name-list"><b>David Watkins</b></h3>
+									<div class="info-list">
 									<br>
-									Assistant Professor
+									Research Lead
 									<br>
-									Stanford University, USA
+									Tutor Intelligence
 									<br>
-									<a href="https://shurans.github.io/" target="_blank">Personal website</a>
+									<a href="https://davidjosephwatkins.com" target="_blank" rel="noopener noreferrer">Personal website</a>
+									&bull;
+									<a href="https://whattotelltherobot.com" target="_blank" rel="noopener noreferrer">What to Tell the Robot</a>
 									<br>
 									</div>
-									<p class='talk-list'>
-									<b> Talk title:</b> Five Lessons Learned on Deformable Object Manipulation<br>
-								</p>							
-
+									<p class="talk-list"><strong>Talk title:</strong> What Data Robots Need: From Co-Designed Handheld Capture to Fleet-Scale Flywheels</p>
 							  </div>
 							</div>
-							<p>
-							<b> Bio:</b> Shuran Song is an Assistant Professor of Electrical Engineering at Stanford University. Before joining Stanford, she was faculty at Columbia University. Shuran received her Ph.D. in Computer Science at Princeton University, BEng. at HKUST. Her research interests lie at the intersection of computer vision and robotics. Song’s research has been recognized through several awards, including the Best Paper Awards at RSS’22 and T-RO’20, Best System Paper Awards at CoRL’21, RSS’19, and finalists at RSS, ICRA, CVPR, and IROS. She is also a recipient of the NSF Career Award, Sloan Foundation fellowship as well as research awards from Microsoft, Toyota Research, Google, Amazon, and JP Morgan. <br>
-									</p-->
+							<p><strong>Bio:</strong> David Watkins is a robotics researcher and engineer working on manipulation and data infrastructure for robot learning. He recently joined Tutor Intelligence as Research Lead, after several years at the RAI Institute working on handheld data collection and VLA policy training. He holds a PhD from Columbia University and co-authors the blog <em>What to Tell the Robot</em> with Stefanie Tellex (Brown University).</p>
 
-					
-
-							<hr style="width:80%;text-align:left;margin-left:5">
-
-
-
-
+						</div>
 					</section>
 
-					<!-- org -->
 					<section id="org" class="wrapper style3 spotlights">
 						<div class="inner">
 							<h2>Organizers</h2>
@@ -780,24 +406,9 @@ What recurring practical observations can be turned into testable hypotheses?</l
 							  <li>Aude Billard - École Polytechnique Fédérale de Lausanne (EPFL), Switzerland</li>
 							  <li>Danica Kragic - KTH Royal Institute of Technology, Sweden</li>
 							</ul>
+						</div>
 					</section>
 
-					<!-- collaberations -->
-					<!--section id="collab" class="wrapper style4 fade-up">
-						<div class="inner">
-							<h2>Links</h2>
-							<ul>
-							<li>
-							  <b>Conference website:</b> Link to the conference website <a href="https://www.ieee-icra.org/">https://www.ieee-icra.org/</a>
-							</li>
-							</ul>
-						</div>
-					</section-->
-
-
-
-
-					<!-- contact -->
 					<section id="contact" class="wrapper style1 spotlights">
 						<div class="inner">
 							<h2>Contact</h2>
@@ -813,17 +424,40 @@ What recurring practical observations can be turned into testable hypotheses?</l
 
 			</div>
 
-		<!-- Footer -->
-		<!-- TBD -->
-
-		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
+			<script src="assets/js/utils.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const workshopStart = new Date("2026-07-13T08:00:00+10:00").getTime();
+				const countdown = document.getElementById("demo");
+
+				function updateCountdown() {
+					const distance = workshopStart - Date.now();
+
+					if (distance <= 0) {
+						countdown.textContent = "The workshop is live!";
+						return false;
+					}
+
+					const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+					const minutes = Math.floor((distance / (1000 * 60)) % 60);
+					const seconds = Math.floor((distance / 1000) % 60);
+					countdown.textContent = `Workshop begins in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+					return true;
+				}
+
+				updateCountdown();
+				const countdownInterval = setInterval(function () {
+					if (!updateCountdown()) {
+						clearInterval(countdownInterval);
+					}
+				}, 1000);
+			</script>
 
 	</body>
 </html>
