@@ -48,12 +48,31 @@
 				border-radius: 0.35em;
 				width: 100%;
 			}
+
+			.video-embed {
+				border-radius: 0.35em;
+				height: 0;
+				margin-top: 1.5em;
+				max-width: 900px;
+				overflow: hidden;
+				padding-bottom: 56.25%;
+				position: relative;
+			}
+
+			.video-embed iframe {
+				border: 0;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<div style="background-color:#374e73; color:white; text-align:center; padding:12px; font-size:1.1em; font-family:Arial,Helvetica,sans-serif; position:sticky; top:0; z-index:9999;">
-			<b>Monday, 13 July 2026</b> &bull; Morning Session &bull; <a href="https://maps.app.goo.gl/rmmKr8qNnpQF8MZt8" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">UTS Building 11, Level 3, Room 301</a> &bull; Sydney, Australia &bull; <a href="https://roboticsconference.org/" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">RSS 2026</a>
+			<b>Monday, 13 July 2026</b> &bull; Morning Session &bull; <a href="https://youtube.com/live/p5g7VKOMTkg" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">Livestream</a> &bull; <a href="https://maps.app.goo.gl/rmmKr8qNnpQF8MZt8" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">UTS Building 11, Level 3, Room 301</a> &bull; Sydney, Australia &bull; <a href="https://roboticsconference.org/" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">RSS 2026</a>
 		</div>
 
 			<section id="sidebar">
@@ -62,6 +81,7 @@
 						<ul>
 							<li><a href="#intro">Home</a></li>
 							<li><a href="#location">Location</a></li>
+							<li><a href="#livestream">Livestream</a></li>
 							<li><a href="#content">Content</a></li>
 							<li><a href="#award">Award</a></li>
 							<li><a href="#schedule">Schedule</a></li>
@@ -83,6 +103,16 @@
 							<p><a href="https://maps.app.goo.gl/rmmKr8qNnpQF8MZt8" target="_blank" rel="noopener noreferrer">Open the workshop location in Google Maps</a></p>
 							<div class="location-photo">
 								<img src="building11.jpg" alt="Building 11 workshop location" />
+							</div>
+						</div>
+					</section>
+
+					<section id="livestream" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Livestream</h2>
+							<p><a href="https://youtube.com/live/p5g7VKOMTkg" target="_blank" rel="noopener noreferrer">Open the workshop livestream on YouTube</a></p>
+							<div class="video-embed">
+								<iframe src="https://www.youtube.com/embed/p5g7VKOMTkg" title="It's the demos workshop livestream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
 						</div>
 					</section>
