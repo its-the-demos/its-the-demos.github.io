@@ -39,29 +39,66 @@
 			  color: white;
 			}
 
-			.location-photo {
-				margin-top: 1.5em;
-				max-width: 900px;
-			}
-
-			.location-photo img {
-				border-radius: 0.35em;
-				width: 100%;
-			}
-
-			.livestream-card {
+			.video-card {
 				background: rgba(255, 255, 255, 0.08);
 				border-radius: 0.35em;
 				margin-top: 1.5em;
 				max-width: 900px;
 				padding: 2em;
 			}
+
+			.award-photo {
+				margin: 1.5em 0;
+				max-width: 900px;
+			}
+
+			.award-photo img {
+				border-radius: 0.35em;
+				width: 100%;
+			}
+
+			.video-preview {
+				border: 0;
+				border-radius: 0.35em;
+				display: block;
+				margin-bottom: 1em;
+				overflow: hidden;
+				position: relative;
+				text-decoration: none;
+			}
+
+			.video-preview img {
+				display: block;
+				width: 100%;
+			}
+
+			.video-preview .play-button {
+				background: rgba(0, 0, 0, 0.7);
+				border-radius: 50%;
+				font-size: 3em;
+				height: 2em;
+				left: 50%;
+				line-height: 2em;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 2em;
+			}
+
+			.video-preview .video-preview-text {
+				background: rgba(0, 0, 0, 0.7);
+				bottom: 1em;
+				left: 1em;
+				padding: 0.4em 0.8em;
+				position: absolute;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
 
 		<div style="background-color:#374e73; color:white; text-align:center; padding:12px; font-size:1.1em; font-family:Arial,Helvetica,sans-serif; position:sticky; top:0; z-index:9999;">
-			<b>Monday, 13 July 2026</b> &bull; Morning Session &bull; <a href="https://youtube.com/live/p5g7VKOMTkg" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">Livestream</a> &bull; <a href="https://maps.app.goo.gl/rmmKr8qNnpQF8MZt8" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">UTS Building 11, Level 3, Room 301</a> &bull; Sydney, Australia &bull; <a href="https://roboticsconference.org/" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">RSS 2026</a>
+			<b>Monday, 13 July 2026</b> &bull; Morning Session &bull; <a href="https://youtu.be/SmLt83Td-4U" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">Workshop Video</a> &bull; <a href="https://maps.app.goo.gl/rmmKr8qNnpQF8MZt8" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">UTS Building 11, Level 3, Room 301</a> &bull; Sydney, Australia &bull; <a href="https://roboticsconference.org/" target="_blank" rel="noopener noreferrer" style="color:#adc8f0;">RSS 2026</a>
 		</div>
 
 			<section id="sidebar">
@@ -69,8 +106,7 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Home</a></li>
-							<li><a href="#location">Location</a></li>
-							<li><a href="#livestream">Livestream</a></li>
+							<li><a href="#video">Video</a></li>
 							<li><a href="#content">Content</a></li>
 							<li><a href="#award">Award</a></li>
 							<li><a href="#schedule">Schedule</a></li>
@@ -84,33 +120,24 @@
 			</section>
 
 			<div id="wrapper">
-					<section id="location" class="wrapper style2 fade-up">
+					<section id="video" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>HOW TO GET THERE</h2>
-							<p><strong>Location:</strong> UTS Building 11, Level 3, Room 301.</p>
-							<p><strong>Address:</strong> CB11/81-113 Broadway, Ultimo NSW 2007.</p>
-							<p><a href="https://maps.app.goo.gl/rmmKr8qNnpQF8MZt8" target="_blank" rel="noopener noreferrer">Open the workshop location in Google Maps</a></p>
-							<div class="location-photo">
-								<img src="building11.jpg" alt="Building 11 workshop location" />
-							</div>
-						</div>
-					</section>
-
-					<section id="livestream" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Livestream</h2>
-							<div class="livestream-card">
-								<p>The livestream is hosted on YouTube. If you are joining remotely, please open it directly there.</p>
-								<ul class="actions">
-									<li><a href="https://youtube.com/live/p5g7VKOMTkg" target="_blank" rel="noopener noreferrer" class="button primary">Watch the livestream on YouTube</a></li>
-								</ul>
+							<h2>Workshop Video</h2>
+							<div class="video-card">
+								<p>The workshop recording is available on YouTube. Timestamp links are included in the schedule below.</p>
+								<a class="video-preview" href="https://youtu.be/SmLt83Td-4U" target="_blank" rel="noopener noreferrer" aria-label="Watch the workshop recording on YouTube">
+									<img src="https://img.youtube.com/vi/SmLt83Td-4U/hqdefault.jpg" alt="Workshop video preview" />
+									<span class="play-button" aria-hidden="true">▶</span>
+									<span class="video-preview-text">Watch on YouTube</span>
+								</a>
+								<p><a href="https://youtu.be/SmLt83Td-4U" target="_blank" rel="noopener noreferrer">Open the workshop video on YouTube</a></p>
 							</div>
 						</div>
 					</section>
 
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1 id="demo" aria-live="polite">Counting down to RSS 2026…</h1>
+							<h1 id="demo" aria-live="polite">Workshop recording now available</h1>
 
 							<h2>It’s the demos: A Deep Look at the Role of Demonstration Quality in Imitation-Based Robot Manipulation @ <a href="https://roboticsconference.org/" target="_blank">RSS 2026</a> </h2>
 
@@ -182,27 +209,30 @@ What recurring practical observations can be turned into testable hypotheses?</l
 						<div class="inner">
 							<h2>Award</h2>
 
-													<p>
-    <a href="https://www.incar-robotics.se/" target="_blank">INCAR Robotics AB</a> will sponsor an award for
-    <strong>Most Useful Practical Information</strong>, intended to recognize
-    the contribution that provides the clearest, most honest, and most actionable
-    guidance for the workshop community. The award emphasizes practical usefulness,
-    transparency about limitations and failure modes, and transferable lessons
-    learned, rather than only polished results.
+							<p>
+    <a href="https://www.incar-robotics.se/" target="_blank">INCAR Robotics AB</a> sponsored the
+    <strong>Most Useful Practical Information</strong> award, recognizing the contribution
+    that provided the clearest, most honest, and most actionable guidance for the
+    workshop community.
   </p>
+
+  <h3>Winner</h3>
+  <p>
+    <strong>Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics</strong>
+    <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=2838s" target="_blank" rel="noopener noreferrer">(video)</a><br>
+    Adam Wei, Nicholas Pfaff, Thomas Cohn, Arif Kerem Dayı, Constantinos Daskalakis, Giannis Daras, Russ Tedrake
+  </p>
+
+  <div class="award-photo">
+    <img src="award.jpeg" alt="Most Useful Practical Information award presentation" />
+  </div>
 
   <p>
-    The award will be <strong>community-voted</strong>. All workshop attendees
-    will be invited to vote for the contribution they consider most useful in
-    practice. To ensure fairness and compliance with RSS workshop award guidelines,
-    the vote will be overseen by an <strong>Award Committee</strong>.
-    The Award Committee will verify eligibility, absence of conflicts of interest,
-    and vote integrity before confirming the final recipient. The committee will
-    normally follow the audience vote and will only intervene if there is an
-    eligibility, conflict-of-interest, or procedural concern.
+    The award was community-voted by workshop attendees and overseen by the
+    Award Committee.
   </p>
 
-  <p>The award consists of:</p>
+  <p>The award consisted of:</p>
 
   <ul>
     <li>one <strong>Meta Quest 3S</strong> headset; and</li>
@@ -219,7 +249,7 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </p>
 
   <p>
-    No contribution co-authored by a workshop organizer will be eligible for this
+    No contribution co-authored by a workshop organizer was eligible for this
     sponsored award.
   </p>
 
@@ -245,21 +275,21 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </tr>
   <tr>
     <td>08:00 – 08:10</td>
-    <td>Workshop Opening</td>
+    <td><a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=0s" target="_blank" rel="noopener noreferrer">Workshop Opening / Introduction</a></td>
   </tr>
   <tr>
     <td>08:10 – 08:40</td>
-    <td><strong>Nadia Figueroa</strong> — TBA (25 min talk + 5 min Q&amp;A, remote)</td>
+    <td><strong>Nadia Figueroa</strong> — <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=319s" target="_blank" rel="noopener noreferrer">The Less your Imitation Learner Knows, the More High-Quality Demos it Needs</a> (25 min talk + 5 min Q&amp;A, remote)</td>
   </tr>
   <tr>
     <td>08:40 – 09:00</td>
     <td>
       <strong>Spotlight Talks #1</strong> (2 × (7 min talk + 3 min Q&amp;A))
       <ul>
-        <li><strong><a href="abstracts/camera_ready/2_Better_Demonstrations_Not_More_Human_Egocentric_Video_over_Teleoperation.pdf" target="_blank" rel="noopener noreferrer">Better Demonstrations, Not More: Human Egocentric Video over Teleoperation</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/2_Better_Demonstrations_Not_More_Human_Egocentric_Video_over_Teleoperation.pdf" target="_blank" rel="noopener noreferrer">Better Demonstrations, Not More: Human Egocentric Video over Teleoperation</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=2555s" target="_blank" rel="noopener noreferrer">(video)</a><br>
           Zhi (Leo) Wang, Botao He, Kelin Yu, Seungjae Lee, Ruohan Gao, Furong Huang, Yiannis Aloimonos
         </li>
-        <li><strong><a href="abstracts/camera_ready/4_Ambient_Diffusion_Policy_Imitation_Learning_from_Suboptimal_Data_in_Robotics.pdf" target="_blank" rel="noopener noreferrer">Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/4_Ambient_Diffusion_Policy_Imitation_Learning_from_Suboptimal_Data_in_Robotics.pdf" target="_blank" rel="noopener noreferrer">Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=2838s" target="_blank" rel="noopener noreferrer">(video)</a><br>
           Adam Wei, Nicholas Pfaff, Thomas Cohn, Arif Kerem Dayı, Constantinos Daskalakis, Giannis Daras, Russ Tedrake
         </li>
       </ul>
@@ -277,13 +307,13 @@ What recurring practical observations can be turned into testable hypotheses?</l
         <li><strong><a href="abstracts/camera_ready/1_What_Demonstration_Curation_Metrics_Do_to_Your_Policy_Lessons_from_a_Controlled_Manipulation_Benchmark.pdf" target="_blank" rel="noopener noreferrer">What Demonstration Curation Metrics Do to Your Policy: Lessons from a Controlled Manipulation Benchmark</a></strong><br>
           Aarav Bedi
         </li>
-        <li><strong><a href="abstracts/camera_ready/2_Better_Demonstrations_Not_More_Human_Egocentric_Video_over_Teleoperation.pdf" target="_blank" rel="noopener noreferrer">Better Demonstrations, Not More: Human Egocentric Video over Teleoperation</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/2_Better_Demonstrations_Not_More_Human_Egocentric_Video_over_Teleoperation.pdf" target="_blank" rel="noopener noreferrer">Better Demonstrations, Not More: Human Egocentric Video over Teleoperation</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=2555s" target="_blank" rel="noopener noreferrer">(spotlight video)</a><br>
           Zhi (Leo) Wang, Botao He, Kelin Yu, Seungjae Lee, Ruohan Gao, Furong Huang, Yiannis Aloimonos
         </li>
         <li><strong><a href="abstracts/camera_ready/3_SPARC_Reliable_Spatial_Annotations_from_Robot_Demonstrations_at_Scale.pdf" target="_blank" rel="noopener noreferrer">SPARC: Reliable Spatial Annotations from Robot Demonstrations at Scale</a></strong><br>
           Nils Blank, Paul Mattes, Maximilian Xiling Li, Jakub Suliga, Thomas Roth, Moritz Reuss, Pankhuri Vanjani, Rudolf Lioutikov
         </li>
-        <li><strong><a href="abstracts/camera_ready/4_Ambient_Diffusion_Policy_Imitation_Learning_from_Suboptimal_Data_in_Robotics.pdf" target="_blank" rel="noopener noreferrer">Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/4_Ambient_Diffusion_Policy_Imitation_Learning_from_Suboptimal_Data_in_Robotics.pdf" target="_blank" rel="noopener noreferrer">Ambient Diffusion Policy: Imitation Learning from Suboptimal Data in Robotics</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=2838s" target="_blank" rel="noopener noreferrer">(spotlight video)</a><br>
           Adam Wei, Nicholas Pfaff, Thomas Cohn, Arif Kerem Dayı, Constantinos Daskalakis, Giannis Daras, Russ Tedrake
         </li>
         <li><strong><a href="abstracts/camera_ready/5_Beyond_Clean_Demonstrations_Coverage_Aware_Force_Torque_Data_Collection_for_Contact_Rich_Manipulation.pdf" target="_blank" rel="noopener noreferrer">Beyond Clean Demonstrations: Coverage-Aware Force-Torque Data Collection for Contact-Rich Manipulation</a></strong><br>
@@ -292,10 +322,10 @@ What recurring practical observations can be turned into testable hypotheses?</l
         <li><strong><a href="abstracts/camera_ready/6_Maintaining_Demonstration_Quality_in_a_100_Robot_Teleoperation_Pipeline.pdf" target="_blank" rel="noopener noreferrer">Maintaining Demonstration Quality in a 100-Robot Teleoperation Pipeline</a></strong><br>
           Kunal Kapoor, Shiraz Khan, Joseph McCalmon, Jesse Michel, Arif Mohammed, Katerina Nikiforova, Adam Oppenheimer, Victor Szabo, David Watkins
         </li>
-        <li><strong><a href="abstracts/camera_ready/7_From_Action_Labels_to_Sets_Rethinking_Action_Supervision_for_Imitation_Learning_from_Corrective_Feedback.pdf" target="_blank" rel="noopener noreferrer">From Action Labels to Sets: Rethinking Action Supervision for Imitation Learning from Corrective Feedback</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/7_From_Action_Labels_to_Sets_Rethinking_Action_Supervision_for_Imitation_Learning_from_Corrective_Feedback.pdf" target="_blank" rel="noopener noreferrer">From Action Labels to Sets: Rethinking Action Supervision for Imitation Learning from Corrective Feedback</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=5159s" target="_blank" rel="noopener noreferrer">(spotlight video)</a><br>
           Zhaoting Li, Rodrigo Pérez-Dattari, Robert Babuska, Cosimo Della Santina, Jens Kober
         </li>
-        <li><strong><a href="abstracts/camera_ready/8_RoboPocket_Improve_Robot_Policies_Instantly_with_Your_Phone.pdf" target="_blank" rel="noopener noreferrer">RoboPocket: Improve Robot Policies Instantly with Your Phone</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/8_RoboPocket_Improve_Robot_Policies_Instantly_with_Your_Phone.pdf" target="_blank" rel="noopener noreferrer">RoboPocket: Improve Robot Policies Instantly with Your Phone</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=5683s" target="_blank" rel="noopener noreferrer">(spotlight video)</a><br>
           Junjie Fang, Wendi Chen, Han Xue, Fangyuan Zhou, Tian Le, Yi Wang, Yuting Zhang, Jun Lv, Chuan Wen, Cewu Lu
         </li>
       </ol>
@@ -303,17 +333,17 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </tr>
   <tr>
     <td>10:30 – 11:00</td>
-    <td><strong>Dana Kulić</strong> — Assessing and improving demonstrations and demonstrators for LfD (25 min talk + 5 min Q&amp;A, in person)</td>
+    <td><strong>Dana Kulić</strong> — <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=3406s" target="_blank" rel="noopener noreferrer">Assessing and improving demonstrations and demonstrators for LfD</a> (25 min talk + 5 min Q&amp;A, in person)</td>
   </tr>
   <tr>
     <td>11:00 – 11:20</td>
     <td>
       <strong>Spotlight Talks #2</strong> (2 × (7 min talk + 3 min Q&amp;A))
       <ul>
-        <li><strong><a href="abstracts/camera_ready/7_From_Action_Labels_to_Sets_Rethinking_Action_Supervision_for_Imitation_Learning_from_Corrective_Feedback.pdf" target="_blank" rel="noopener noreferrer">From Action Labels to Sets: Rethinking Action Supervision for Imitation Learning from Corrective Feedback</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/7_From_Action_Labels_to_Sets_Rethinking_Action_Supervision_for_Imitation_Learning_from_Corrective_Feedback.pdf" target="_blank" rel="noopener noreferrer">From Action Labels to Sets: Rethinking Action Supervision for Imitation Learning from Corrective Feedback</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=5159s" target="_blank" rel="noopener noreferrer">(video)</a><br>
           Zhaoting Li, Rodrigo Pérez-Dattari, Robert Babuska, Cosimo Della Santina, Jens Kober
         </li>
-        <li><strong><a href="abstracts/camera_ready/8_RoboPocket_Improve_Robot_Policies_Instantly_with_Your_Phone.pdf" target="_blank" rel="noopener noreferrer">RoboPocket: Improve Robot Policies Instantly with Your Phone</a></strong><br>
+        <li><strong><a href="abstracts/camera_ready/8_RoboPocket_Improve_Robot_Policies_Instantly_with_Your_Phone.pdf" target="_blank" rel="noopener noreferrer">RoboPocket: Improve Robot Policies Instantly with Your Phone</a></strong> <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=5683s" target="_blank" rel="noopener noreferrer">(video)</a><br>
           Junjie Fang, Wendi Chen, Han Xue, Fangyuan Zhou, Tian Le, Yi Wang, Yuting Zhang, Jun Lv, Chuan Wen, Cewu Lu
         </li>
       </ul>
@@ -321,15 +351,15 @@ What recurring practical observations can be turned into testable hypotheses?</l
   </tr>
   <tr>
     <td>11:20 – 11:45</td>
-    <td><strong>David Watkins</strong> — What Data Robots Need: From Co-Designed Handheld Capture to Fleet-Scale Flywheels (20 min talk + 5 min Q&amp;A)</td>
+    <td><strong>David Watkins</strong> — <a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=6138s" target="_blank" rel="noopener noreferrer">What Data Robots Need: From Co-Designed Handheld Capture to Fleet-Scale Flywheels</a> (20 min talk + 5 min Q&amp;A)</td>
   </tr>
   <tr>
     <td>11:45 – 11:55</td>
-    <td>Structured Group Discussion and Presentation</td>
+    <td><a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=7638s" target="_blank" rel="noopener noreferrer">Structured Group Discussion and Presentation</a></td>
   </tr>
   <tr>
     <td>11:55 – 12:00</td>
-    <td>Closing &amp; Award Ceremony</td>
+    <td><a href="https://www.youtube.com/watch?v=SmLt83Td-4U&amp;t=7638s" target="_blank" rel="noopener noreferrer">Closing &amp; Award Ceremony</a></td>
   </tr>
 </table>
 
@@ -409,7 +439,7 @@ What recurring practical observations can be turned into testable hypotheses?</l
 									<a href="https://nbfigueroa.github.io/" target="_blank">Personal website</a>
 									<br>
 									</div>
-									<p class="talk-list"><strong>Talk title:</strong> TBA</p>
+									<p class="talk-list"><strong>Talk title:</strong> The Less your Imitation Learner Knows, the More High-Quality Demos it Needs</p>
 							  </div>
 							</div>
 							<p><strong>Bio:</strong> TBA</p>
@@ -532,7 +562,7 @@ What recurring practical observations can be turned into testable hypotheses?</l
 					const distance = workshopStart - Date.now();
 
 					if (distance <= 0) {
-						countdown.textContent = "The workshop is live!";
+						countdown.textContent = "Workshop recording now available";
 						return false;
 					}
 
